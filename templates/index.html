@@ -7,6 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Immigration Data</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css" 
+    type="text/css">
+    <style>
+      .map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+  <!-- <link href="StyleSheet.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -40,7 +50,10 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div id="myChart"></div>
+        <div id="map" class="map"></div>
+        <div id="popup" class="ol-popup">
+          <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+          <div id="popup-content"></div>        
       </div>
     </div>
   </div>
@@ -48,6 +61,7 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="static/js/app.js"></script>
+  <script type="text/javascript" src="./static/js/logic.js"></script>
   
 
   <!-- <script src="./static/js/bonus.js"></script> -->
