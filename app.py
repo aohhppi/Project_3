@@ -39,10 +39,13 @@ def home():
         
     # )
 
-
 @app.route('/search_tool')
 def search_tool():
     return render_template('/search_tool.html')
+
+@app.route('/map')
+def map():
+    return render_template('/map.html')
 
 @app.route("/api/getresult1")
 def get_result1( ):
