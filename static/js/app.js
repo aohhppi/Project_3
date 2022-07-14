@@ -61,6 +61,49 @@ d3.json('http://127.0.0.1:5000/api/getresult1').then(function(data){
            } 
     }
     console.log(Asia_Imm);
+    let color=[];
+for(var row = 0; row < County.length; row++){
+    for (var k = 0; k < Origin[row].length; k++){
+//         // console.log(otuids[row].length)
+//     // console.log(otuids[0][0]);
+           if(Origin[row][k]=="Asia"){
+                color.push('rgb(93, 164, 214)');
+            }
+           else if (Origin[row][k]=="America"){
+            color.push('rgb(44, 160, 101)');
+            }
+           else if (Origin[row][k]=="Europe"){
+            color.push('rgb(120,120,120)');
+           }
+           else if(Origin[row][k]=="South America"){
+            color.push('rgb(255, 65, 54)');
+           }
+           else if(Origin[row][k]=="Central America"){
+            color.push('rgb(255, 144, 14)');
+           }
+        }
+
+}
+let size=[];
+for(var row = 0; row < County.length; row++){
+    for (var j = 0; j < Immcount[row].length; j++){
+        if(Immcount[row][j]<5000){
+               size.push(20);
+        }
+        else if(Immcount[row][j]<10000){
+               size.push(30);
+        }
+        else if(Immcount[row][j]<20000){
+               size.push(40);
+        }
+        else if(Immcount[row][j]<30000){
+                size.push(60);
+        }
+        else if(Immcount[row][j]<40000){
+          size.push(80);
+  }
+    }
+}
 
     function init(){
             let trace1 = {
@@ -73,7 +116,7 @@ d3.json('http://127.0.0.1:5000/api/getresult1').then(function(data){
              };
         let traceData = [trace1];
         let layout = {
-            title:"Immigrants Counts for Each Race in GA 2015-2019",
+            title:"Number of Immigrants for Each Race in GA 2015-2019",
             margin: {
                 l: 100,
                 r: 100,
@@ -87,7 +130,7 @@ d3.json('http://127.0.0.1:5000/api/getresult1').then(function(data){
         let infotable=d3.select('#sample-metadata').append("table")
         inforow=infotable.append('tr')
         infodata=inforow.append('td')
-        let origin=infodata.text('Origin: '+'Immigrants Count')
+        let origin=infodata.text('Origin: '+'Number of Immigrants')
         inforow=infotable.append('tr')
         infodata=inforow.append('td')
         let asian=infodata.text('Asia: '+Asia_Imm[0])
@@ -105,6 +148,29 @@ d3.json('http://127.0.0.1:5000/api/getresult1').then(function(data){
         let SouthAme=infodata.text('South America: '+SouthAme_Imm[0])
         inforow=infotable.append('tr')
         infodata=inforow.append('td')
+        //  for bubble chart
+ var trace2 = {
+  x: Origin[0],
+  y: Immcount[0],
+//  text: label[0],
+ mode: 'markers',
+ marker: {
+    color:color,
+     size:size  
+ }
+};
+
+var databubble = [trace2];
+
+var layout2 = {
+title: 'Number of Immgrants per County',
+showlegend: false,
+height: 550,
+width: 1000
+};
+
+Plotly.newPlot('bubble', databubble, layout2);
+     
 
         }
 
@@ -148,7 +214,7 @@ for(var j= 0; j < County.length; j++){
      let infotable=d3.select('#sample-metadata').append("table")
      inforow=infotable.append('tr')
      infodata=inforow.append('td')
-     let origin=infodata.text('Origin: '+'Immigrants Count')
+     let origin=infodata.text('Origin: '+'Number of Immigrants')
       inforow=infotable.append('tr')
       infodata=inforow.append('td')
       let asian=infodata.text('Asia: '+Asia_Imm[SelectedRow])
@@ -167,9 +233,27 @@ for(var j= 0; j < County.length; j++){
       inforow=infotable.append('tr')
       infodata=inforow.append('td')
 
+ // for bubble chart
+let x2 = [];
+let y2=[];
+let text2=[];
+for(var row = 0; row < County.length; row++){
+    if(County[row]==dataset) {
+      x2=Origin[row];
+      y2=Immcount[row];
+      text2=Origin[row];
+      break;
+   }
+}
+//function to update the chart
+Plotly.restyle("bubble", "x", [x2]);
+Plotly.restyle("bubble", "y", [y2]);
+Plotly.restyle("bubble", "text", [text2]);
+
 
 }
 init();
+
 
 })
 
