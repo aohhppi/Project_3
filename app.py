@@ -40,6 +40,10 @@ def home():
     # )
 
 
+@app.route('/search_tool')
+def search_tool():
+    return render_template('/search_tool.html')
+
 @app.route("/api/getresult1")
 def get_result1( ):
     # Create our session (link) from Python to the DB
