@@ -27,12 +27,12 @@ We drew our dataset from the US Immigrant Population by State (migrationpolicy.o
 - There are overlaps in population count by origin categories.
 
 ## Main Home Page
-![image](https://user-images.githubusercontent.com/91984732/179319905-13a22ee9-9a75-4936-945b-38b45fd75890.png)
+![image](https://user-images.githubusercontent.com/91984732/179329175-1688cbe6-ad5a-4835-a5b1-a6a1c7260016.png)
 
 ## Map Visualization Page
-![image](https://user-images.githubusercontent.com/91984732/179320054-bf0dc1f7-5ce7-427f-9cc3-611f4eb851d1.png)
+![image](https://user-images.githubusercontent.com/91984732/179329088-be7800dc-f471-44c0-9479-7eaabad2c68d.png)
 
 ## Search Tool Page
-![image](https://user-images.githubusercontent.com/91984732/179320251-f96453f7-a2ca-49c6-bdc8-36e373e120c4.png)
+![image](https://user-images.githubusercontent.com/91984732/179329202-d863ac66-311b-4892-9a61-81dd508876dc.png)
 
 
