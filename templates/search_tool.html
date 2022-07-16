@@ -8,18 +8,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/">Main Home Page</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Map Visualization</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href = 'http://127.0.0.1:5000/search_tool'>Search Tool</a>
-        </li>
-    </ul>
-  <div id="observablehq-d8bc0b7b"></div>
+    <!-- <nav class="navbar" style="background-color:gray;"> -->
+        <ul class="nav nav-pills" style="border: solid; border-color:#357AB8">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/">Main Home Page</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5000/map">Map Visualization</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href = 'http://127.0.0.1:5000/search_tool'>Search Tool</a>
+            </li>
+        </ul>
+    </nav>
+
+  <div id="observablehq-d8bc0b7b" style="border: solid; border-width: 0.5in; border-color: #357AB8;"></div>
   
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -31,6 +34,14 @@
     <div class="col-md-12">
       <div id="plot"></div>
     </div>
+    <div class="row">
+        <h1 style="color: white;"> h</h1>
+      </div>
+    
+      
+      <div class="footer" style="text-align:center ;">          
+      &copy; <a target="_blank" href="https://github.com/aohhppi/Project_3">The Foreigners</a>      
+     </div>
   <script src= "./static/js/plot_top_10.js"></script> 
   <script src="https://d3js.org/d3.v5.min.js"></script>
 

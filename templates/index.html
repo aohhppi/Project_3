@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <ul class="nav nav-pills">
+  <ul class="nav nav-pills"  style="border: solid; border-color:#357AB8">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/">Main Home Page</a>
     </li>
@@ -34,12 +34,23 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-        <h1>GA Immigrants Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <style>
+          .jumbotron {
+              background: url("https://www.kindpng.com/picc/m/431-4315129_immigration-and-hr-hd-png-download.png") center center / cover no-repeat;
+          }
+        </style>
+
+
       </div>
     </div>
+    
+      <div class="row">
+        <h1 style="text-align: center ;font-style:italic; color: black;">Georgia Immigrants Dashboard</h1>
+        <p style="text-align: center ; font-style: italic; color: black;">Use the interactive charts below to explore the dataset</p>
+      </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4" >
+    
         <div class="well">
           <h5>GA Counties:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
@@ -59,11 +70,19 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12" style="border:soild; border-color:cornflowerblue">
         <div id="bubble"></div>
       </div>
     </div>
   </div>
+  <div class="row">
+    <h1 style="color: white;"> h</h1>
+  </div>
+
+  
+  <div class="footer" style="text-align:center ;">          
+  &copy; <a target="_blank" href="https://github.com/aohhppi/Project_3">The Foreigners</a>      
+ </div>
 
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
