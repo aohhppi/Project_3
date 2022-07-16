@@ -36,7 +36,7 @@ var map = new ol.Map({
 
   var openStreetMapStandard = new ol.layer.Tile({
     source: new ol.source.OSM(),
-    visible: true,
+    visible: false,
     title: 'OSMStandard'
   })
 
@@ -54,7 +54,7 @@ var map = new ol.Map({
       url: 'https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
       attribuitions: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
     }),
-    visible: false,
+    visible: true,
     title: 'StamenTerrain'
   })
 
