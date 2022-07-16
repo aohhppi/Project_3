@@ -5,13 +5,21 @@
     <!-- <link rel="stylesheet" href="libs/v6.14.1-dist/ol.css" type="text/css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
-      .map {
+    h5 { 
+    display: block;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    }  
+/*       .map {
         height: 500px;
         width: 100%;
-      }
+      } */
     </style>
     <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
-    <title>OpenLayers example</title>
+    <title>Interactive Map</title>
   </head>
   <body>
     <ul class="nav nav-pills" style="border: solid; border-color:#357AB8">
@@ -25,6 +33,20 @@
           <a class="nav-link" href = 'http://127.0.0.1:5000/search_tool'>Search Tool</a>
         </li>
       </ul>
+    
+    <div class="grid-container">
+        <div class="grid-1">
+          <div class="sidebar">
+            <h5>Base Layers</h5>
+            <input type="radio" name="baseLayerRadioButton" value="OSMStandard" checked>OSM Standard<br>
+            <input type="radio" name="baseLayerRadioButton" value="StamenTerrain" checked>Stamen Terrain<br>  
+          <div>
+        </div>    
+        <div class="grid-2">
+          <div id="map_logic" class="map"></div>
+        
+        </div>
+      </div>
     <!-- <script type="text/javascript"> window.onload=init; </script> -->
     <div class="row" >
       <h1 style="text-align: center ;font-style:italic;">Interactive Map</h1>
