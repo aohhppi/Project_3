@@ -116,7 +116,7 @@ for(var row = 0; row < County.length; row++){
              };
         let traceData = [trace1];
         let layout = {
-            title:"Number of Immigrants for Each Race in GA 2015-2019",
+            title:"Number of Immigrants for Population Groups in GA 2015-2019",
             margin: {
                 l: 100,
                 r: 100,
@@ -163,7 +163,7 @@ for(var row = 0; row < County.length; row++){
 var databubble = [trace2];
 
 var layout2 = {
-title: 'Number of Immgrants per County',
+title: 'Number of Immigrants for Geogia Counties',
 showlegend: false,
 height: 550,
 width: 1000
