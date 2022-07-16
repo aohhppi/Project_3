@@ -33,6 +33,6 @@ We drew our dataset from the US Immigrant Population by State (migrationpolicy.o
 ![image](https://user-images.githubusercontent.com/91984732/179329088-be7800dc-f471-44c0-9479-7eaabad2c68d.png)
 
 ## Search Tool Page
-![image](https://user-images.githubusercontent.com/91984732/179329202-d863ac66-311b-4892-9a61-81dd508876dc.png)
+![image](https://user-images.githubusercontent.com/91984732/179334704-d2ea27bd-2ae8-43c3-b17e-d3d8c51e37c6.png)
 
 
