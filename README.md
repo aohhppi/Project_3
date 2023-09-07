@@ -21,6 +21,7 @@ We drew our dataset from the US Immigrant Population by State (migrationpolicy.o
 ![image](https://user-images.githubusercontent.com/91984732/179319385-7b71bb5b-3521-40a2-9b53-87f354160fed.png)
 
 ## Project Limitation
+
 - The dataset is limited to the top 15 counties with highest immigrant population in the State of Georgia.
 - Given the fact that there undocumented immigrants, the dataset only accounts for documented immigrants captured in USCIS. 
 - The dataset only shows cumulative data from 2015-2019 and does not break the population by year. 
